@@ -6,7 +6,10 @@ class PigLatinizer
       i = 0
       word.each do |letter|
         if ["a", "e", "i", "o", "u"].include?(letter)
-          binding.pry 
+          binding.pry
+        end
+      end
+    end 
   end
 
 end
