@@ -1,12 +1,11 @@
 class PigLatinizer
 
   def piglatinize(string)
-    string.downcase!
     arr = string.split(" ")
     arr.map do |word|
       i = 0
       word.each_char do |letter|
-        if ["a", "e", "i", "o", "u"].include?(letter)
+        if ["a", "e", "i", "o", "u"].include?(letter.downcase)
           break
         end
         i +=1
