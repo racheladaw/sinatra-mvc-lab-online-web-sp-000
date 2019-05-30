@@ -3,7 +3,7 @@ class PigLatinizer
   def piglatinize(string)
     arr = string.split(" ")
     arr.map do |word|
-      if ["a", "e", "i", "o", "u"].include?(word[0])
+      if ["a", "e", "i", "o", "u"].include?(word[0].downcase)
         word << "way"
       else
         i = 0
