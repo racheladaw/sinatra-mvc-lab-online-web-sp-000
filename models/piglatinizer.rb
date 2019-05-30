@@ -26,7 +26,7 @@ class PigLatinizer
       # else
       #   word << "way"
       # end
-    end 
+    end
   end.join(" ")
   end
 end
