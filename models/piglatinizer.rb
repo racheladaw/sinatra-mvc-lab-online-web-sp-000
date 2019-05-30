@@ -11,7 +11,7 @@ class PigLatinizer
         i +=1
       end
     end_of_word = word.slice!(0, i)
-    binding.pry
+    #binding.pry
     word << end_of_word << "ay"
   end.join(" ")
   end
