@@ -15,7 +15,7 @@ class PigLatinizer
       end_of_word = word.slice!(0, i)
     #binding.pry
       word << end_of_word
-    binding.pry
+    #binding.pry
       if ["a", "e", "i", "o", "u"].include?(end_of_word[0])
         word << "way"
       else
