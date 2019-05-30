@@ -2,7 +2,7 @@ class PigLatinizer
 
   def piglatinize(string)
     arr = string.split(" ")
-    arr.each do |word|
+    arr.map do |word|
       i = 0
       word.each_char do |letter|
         if ["a", "e", "i", "o", "u"].include?(letter)
@@ -12,6 +12,7 @@ class PigLatinizer
       end
     end_of_word = word.slice!(0, i)
     binding.pry
-    end
-  end 
+    word << end_of_word << "ay"
+  end.join(" ")
+  end
 end
