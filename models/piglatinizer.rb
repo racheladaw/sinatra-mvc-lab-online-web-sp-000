@@ -11,15 +11,19 @@ class PigLatinizer
         end
         i +=1
       end
-    end_of_word = word.slice!(0, i)
+    if word.length > 1
+      end_of_word = word.slice!(0, i)
     #binding.pry
-    word << end_of_word
+      word << end_of_word
     binding.pry
-    if ["a", "e", "i", "o", "u"].include?(end_of_word[0])
-      word << "way"
+      if ["a", "e", "i", "o", "u"].include?(end_of_word[0])
+        word << "way"
+      else
+        word << "ay"
+      end
     else
-      word << "ay"
-    end
+      word << "way"
+    end 
   end.join(" ")
   end
 end
