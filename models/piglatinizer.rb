@@ -1,6 +1,7 @@
 class PigLatinizer
 
   def piglatinize(string)
+    string.downcase!
     arr = string.split(" ")
     arr.map do |word|
       i = 0
